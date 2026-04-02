@@ -55,9 +55,7 @@ def calculate_inverse_matrix(A, _A, x, i):
     n = A.shape[0]
     A_asterisk = A.copy()
     A_asterisk[:, i-1] = x
-    print(f"A_sterisk {A_asterisk}")
     l = _A @ x
-    print(f"l {l}")
     if l[i-1] == 0:
         if np.linalg.matrix_rank(A_asterisk) < n:
             return A_asterisk, None, A_asterisk
